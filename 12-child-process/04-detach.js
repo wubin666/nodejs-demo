@@ -4,7 +4,7 @@ const cp=require('child_process');
 
 console.log('I am father process.PID:',process.pid);
 
-cp.spawn('./02-child.js',[],{detached:true,stdio:['ignore',1,2]});
+cp.spawn('node',['./02-child.js'],{detached:true,stdio:['ignore',1,2]});
 
 //cmd.stdout.pipe(process.stdout);
 
